@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>{% for i in hammasi %}</h1>
+    <h2> {{i.sarlavha}} </h2>
+    <h1>{% endfor %}</h1>
+    <form method="post" action="blog/">{% csrf_token %}
+        <input type="text" name="sarlavha">
+        <input type="date" name="sana">
+        <input type="text" name="mavzu">
+        <input type="text" name="matn">
+    </form>
+    <a href=""><button> Qo'shish </button></a>
+</body>
+</html>
